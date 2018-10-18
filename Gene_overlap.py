@@ -16,10 +16,6 @@ args = parser.parse_args()
 
 names1 = ["chrom","start","end","type","val","strand"]  # standard bed format, must only be 6 columns though
 
-#cmt2_specific=pd.read_table("/Users/mac/Desktop/Computing/Scripts/R_scripts-2/10_11_18_rebuild_Lhasa2/cmt2-3_specific_lhasa2.fx.DMR.bed",sep="\t",names=names1)
-#olp=pd.read_table("/Users/mac/Desktop/Computing/Scripts/R_scripts-2/10_11_18_rebuild_Lhasa2/lhasa2_olp_cmt2-3.fx.DMR.bed",sep="\t",names=names1)
-#lhasa2_specific=pd.read_table("/Users/mac/Desktop/Computing/Scripts/R_scripts-2/10_11_18_rebuild_Lhasa2/lhasa2_specific_cmt2-3.fx.DMR.bed",sep="\t",names=names1)
-
 df=pd.read_table(args.file1,sep="\t",names=names1)
 
 TEs=pd.read_table("/Users/mac/Desktop/Github/Gene_and_TE_mapper/ALL_TEs.txt",sep="\t")
@@ -43,6 +39,10 @@ Genes=pd.read_table("/Users/mac/Desktop/Github/Gene_and_TE_mapper/TAIR10_genes_o
 #chr1    3631    5899            0       +       gene    AT1G01010
 #chr1    5928    8737            0       -       gene    AT1G01020
 
+
+# -in file:
+#chr1    257701  257800  hypo    0       +
+#chr1    696501  696600  hypo    0       +
 
 listA = []
 
